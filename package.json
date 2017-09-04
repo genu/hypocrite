@@ -4,7 +4,8 @@
   "description": "Serverless mocking library",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test":
+      "istanbul cover -x *.spec.js _mocha -- -R spec test/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/genu/hypocrite/issues"
   },
-  "homepage": "https://github.com/genu/hypocrite#readme"
+  "homepage": "https://github.com/genu/hypocrite#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0"
+  }
 }

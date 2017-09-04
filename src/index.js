@@ -1,3 +1,5 @@
 module.exports = {
-  func: function() {}
+  GET: function() {
+    return 'hello';
+  }
 };
