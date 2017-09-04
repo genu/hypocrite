@@ -1,0 +1,21 @@
+{
+  "name": "hypocrite",
+  "version": "1.0.0",
+  "description": "Serverless mocking library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genu/hypocrite.git"
+  },
+  "keywords": ["mock"],
+  "author":
+    "Eugen Istoc <eugenistoc@gmail.com> (http://eugenistoc.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/genu/hypocrite/issues"
+  },
+  "homepage": "https://github.com/genu/hypocrite#readme"
+}
