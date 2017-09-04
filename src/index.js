@@ -1,5 +1,7 @@
+import faker from 'faker';
+
 module.exports = {
   GET: function() {
-    return 'hello';
+    faker.name.findName();
   }
 };
