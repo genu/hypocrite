@@ -1,19 +1,26 @@
-import { join } from 'path';
+import path from 'path';
+import nodeExternals from 'webpack-node-externals';
 
-const include = join(__dirname, '../src');
+// const include = join(__dirname, '../src');
 
 //@todo Ignore dep modules from bundle
 export default {
-  entry: join(__dirname, '../src/index.js'),
+  entry: path.resolve(__dirname, '../src/index.js'),
   output: {
-    path: join(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd',
     library: 'hypocrite'
   },
+  target: 'node',
+  externals: [nodeExternals()],
   devtool: 'source-map',
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader', include }
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [path.resolve(__dirname, '../src')]
+      }
     ]
   }
 };

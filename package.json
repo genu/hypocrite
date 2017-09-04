@@ -4,23 +4,21 @@
   "description": "Serverless mocking library",
   "main": "dist/index.js",
   "scripts": {
-    "test":
-      "istanbul cover -x *.spec.js _mocha -- -R spec test/index.spec.js",
+    "test": "istanbul cover -x *.spec.js _mocha -- -R spec test/index.spec.js",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --out-dir dist src",
-    "build:umd":
-      "webpack --config ./config/webpack.config.babel.js --output-filename index.umd.js",
-    "build:umd.min":
-      "webpack --config ./config/webpack.config.babel.js --output-filename index.umd.min.js -p"
+    "build:umd": "webpack --config ./config/webpack.config.babel.js --output-filename index.umd.js",
+    "build:umd.min": "webpack --config ./config/webpack.config.babel.js --output-filename index.umd.min.js -p"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/genu/hypocrite.git"
   },
-  "keywords": ["mock"],
-  "author":
-    "Eugen Istoc <eugenistoc@gmail.com> (http://eugenistoc.com/)",
+  "keywords": [
+    "mock"
+  ],
+  "author": "Eugen Istoc <eugenistoc@gmail.com> (http://eugenistoc.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/genu/hypocrite/issues"
@@ -29,13 +27,14 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
     "npm-run-all": "^4.1.1",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.5",
-    "babel-preset-env": "^1.6.0"
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "faker": "^4.1.0"
